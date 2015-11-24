@@ -48,24 +48,25 @@ a {
 }
 
 .me__content__info {
-    display: flex;
+    position: relative;
 }
 
 .me__content__info__text {
-   margin: auto 48px auto 0;
+    margin: auto 48px auto 0;
+    padding-right: 200px;
 }
 
 .me__image {
     display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
     margin: auto;
     max-width: 200px;
     max-height: 200px;
     width: 100%;
     border-radius: 100%;
     overflow: hidden;
-    transform: translateY(48px);
-    -webkit-transform: translateY(48px);
-    -moz-transform: translateY(48px);
 }
 
 .me__image__100-width {
@@ -164,4 +165,28 @@ hr {
 
 .skill__header {
     margin: 24px 0 8px 0;
+}
+
+@media screen and (max-width: 700px) {    
+    .me__content__info {
+        display: block;
+    }
+
+    .me__content__info__text {
+        padding: 0;
+    }
+    
+    .me__image {
+        position: static;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+
+@media print {
+    a {
+	color: #212121;
+    }
+    .page_break {page-break-after: always;} 
 }
