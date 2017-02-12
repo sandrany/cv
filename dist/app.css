@@ -7,18 +7,17 @@ body, html {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
     color: #212121;
-    font-size: 16px;
+    font-size: 14px;
     -webkit-font-smoothing: antialiased;
     letter-spacing: .1px;
-
 }
 
 h1 {
 	color: #fff;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 400;
-    line-height: 1.5;
-	margin-bottom: 0;
+	margin: 0 0 8px 0;
+    line-height: 1em;
 }
 
 p {
@@ -29,10 +28,16 @@ a {
     color:#FF4081;
     text-decoration: none;
 }
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
 .header__subheader {
 	color:#CFD8DC;
-	font-size: 22px;
-    margin-top: 4px;
+	font-size: 18px;
 }
 
 .header__content {
@@ -41,10 +46,9 @@ a {
 	padding: 32px 16px;
 }
 
-.content {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 32px 16px;
+.header__subheader-content {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .me__content__info {
@@ -53,54 +57,45 @@ a {
 
 .me__content__info__text {
     margin: auto 48px auto 0;
-    padding-right: 200px;
 }
 
 .me__image {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    max-width: 200px;
-    max-height: 200px;
-    width: 100%;
-    border-radius: 100%;
-    overflow: hidden;
+    display: none;
 }
-
-.me__image__100-width {
-    width: 100%;
-}
-
 
 .me__description {
     margin-bottom: 16px;
 }
+
 .section {
-    margin: 8px 0 48px 0;
+    margin: 8px 0 30px 0;
 }
 
 .section__title {
-	font-size: 34px;
+	font-size: 30px;
     font-weight: 400;
     line-height: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 4px;
+    color:#607D8B;
 }
 
-.section__title > * {
-    vertical-align: middle;
-    color:#455A64;
-    fill:#455A64;
+.column1 .section__title:first-child {
+    margin-top: 0;
 }
 
-.section__title span {
-    margin-left: 8px;
+.sub-section {
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
+
+.sub-section__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .fact {
 	color: #212121;
-    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     letter-spacing: .1px;
     line-height: 24px;
@@ -109,28 +104,25 @@ a {
 }
 
 .project {
-    padding-bottom: 4px;
+    padding-bottom: 25px;
 }
 
 .project__date {
 	color:#727272;
-    margin:0 0 16px 0;
+    margin: 5px 0 10px 0;
 }
 
 .project__title {
-	font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    color:#536DFE;
-    color: #212121;
-    margin: 0 0 8px 0;
+    font-weight: bold;
+    margin: 0;
 }
 
-.project__technoloy
-{
-    margin-top: 8px;
+.project__technoloy,
+.project__descrtiption {
+    margin-top: 6px;
+}
+.project__technoloy {
+    line-height: 1.5em;
 }
 
 hr {
@@ -142,47 +134,75 @@ hr {
 
 
 .educations {
-    list-style: none;
-    padding: 0;
+    padding-left: 27px;
 }
 
 .education {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .education:last-child {
     margin-bottom: 0;
 }
 
-.subtitle {
-    margin: 0 0 8px 0;
+.educations__subtitle {
+    margin: 0 0 4px 0;
 }
 
 .extra-line-hight {
    line-height: 1.8em;
 }
 
+.skill__title {
+
+}
 
 .skill__header {
-    margin: 24px 0 8px 0;
+    margin: 15px 0 4px 0;
 }
 
-@media screen and (max-width: 700px) {    
-    .me__content__info {
-        display: block;
-    }
-
-    .me__content__info__text {
-        padding: 0;
-    }
-    
+@media screen and (min-width: 700px) {  
     .me__image {
-        position: static;
-        margin-top: 24px;
-        margin-bottom: 24px;
+        max-width: 100px;
+        max-height: 100px;
+        width: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-right: 24px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .me__image__100-width {
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        display: -webkit-flex;
+    }
+
+    .column1 {
+        flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+    }
+
+    .column2 {
+        flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+    }
+
+    .box {
+        background-color: #f6f1ed;
+        padding: 10px 20px 20px 20px;
+        width: 300px;
+        margin-left: 32px;
+    }
+
+    .box__header {
+        margin: 10px 0 5px 0;
     }
 }
-
 
 @media print {
     a {
