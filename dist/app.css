@@ -77,9 +77,6 @@ a {
     line-height: 40px;
     margin-bottom: 4px;
     color:#607D8B;
-}
-
-.column1 .section__title:first-child {
     margin-top: 0;
 }
 
@@ -135,6 +132,7 @@ hr {
 
 .educations {
     padding-left: 27px;
+    margin: 0;
 }
 
 .education {
@@ -146,7 +144,7 @@ hr {
 }
 
 .educations__subtitle {
-    margin: 0 0 4px 0;
+    margin: 0;
 }
 
 .extra-line-hight {
@@ -208,5 +206,4 @@ hr {
     a {
 	color: #212121;
     }
-    .page_break {page-break-after: always;} 
 }
